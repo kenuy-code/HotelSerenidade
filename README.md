@@ -1,4 +1,4 @@
-# LaraHotel
+# Hotel Serenidade
 Site One Page para o Hotel Serenidade
 ## Links
 ### Endereço
