@@ -2,6 +2,20 @@
     Folha de estilo do site Hotel Serenidade 
 */
 
-body{
-    background-color: aqua;
+/* Smartphone Landscape >>>>>*/
+@media (win-width: 576px){
+
+}
+/* Tablet Portrait >>>>>*/
+@media (win-width: 768px){
+
+}
+
+/* Tablet Landscape >>>>>*/
+@media (win-width: 992px){
+
+}
+/* PC >>>>>*/
+@media (win-width: 1200px){
+    
 }
