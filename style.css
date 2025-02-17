@@ -3,7 +3,7 @@
 */
 
 /* CSS Reset >>>>>*/
-*{
+* {
     margin: 0;
     padding: 0;
     border: 0;
@@ -12,57 +12,94 @@
 /* Importação Google Fonts >>>>>>*/
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 
-    body{
-        font-family: 'Roboto', sans-serif;
-        font-size: 16px;
-        font-weight: 400;
-        line-height: 1.5;
-        color: #333;
-        background-color: rgb(255, 255, 255);
-    }
+body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #333;
+    background-color: rgb(255, 255, 255);
+}
 
 /* Layout >>>>>*/
-.container{
+.container {
     margin: 0 auto;
-    background-color: sienna;
+    background-color: #dcdcdc;
+}
+
+.flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#topo {
+    position: fixed;
+    right: 10px;
+    bottom: 10px;
+}
+/* Smartphone Portrait >>>>>*/
+header {
+    height: 60px;
+}
+
+#logo img {
+    width: 128px;
+    height: 128px;
 }
 /* Smartphone Landscape >>>>>*/
-@media (min-width: 576px){
-    body{
+@media (min-width: 576px) {
+    body {
         background-color: rgb(92, 210, 246);
     }
+
     /* Layout >>>>>*/
-    .container{
+    .container {
         max-width: 540px;
     }
 }
+
 /* Tablet Portrait >>>>>*/
-@media (min-width: 768px){
-    body{
+@media (min-width: 768px) {
+    body {
         background-color: rgb(225, 255, 0);
     }
+
     /* Layout >>>>>*/
-    .container{
+    .container {
         max-width: 720px;
     }
 }
+
 /* Tablet Landscape >>>>>*/
-@media (min-width: 992px){
-    body{
+@media (min-width: 992px) {
+    body {
         background-color: rgb(227, 59, 47);
     }
+
     /* Layout >>>>>*/
-    .container{
+    .container {
         max-width: 960px;
     }
 }
+
 /* PC >>>>>*/
-@media (min-width: 1200px){
-    body{
+@media (min-width: 1200px) {
+    body {
         background-color: rgb(43, 255, 0);
     }
+
     /* Layout >>>>>*/
-    .container{
+    .container {
         max-width: 1140px;
+    }
+
+    /* Cabeçalho >>>>>*/
+    header {
+        height: 120px;
+    }
+    #logo img {
+        width: 256px;
+        height: 256px;
+        margin-top: 30px;
     }
 }
