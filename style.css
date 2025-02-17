@@ -2,20 +2,67 @@
     Folha de estilo do site Hotel Serenidade 
 */
 
-/* Smartphone Landscape >>>>>*/
-@media (win-width: 576px){
+/* CSS Reset >>>>>*/
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
 
+/* Importação Google Fonts >>>>>>*/
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+    body{
+        font-family: 'Roboto', sans-serif;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 1.5;
+        color: #333;
+        background-color: rgb(255, 255, 255);
+    }
+
+/* Layout >>>>>*/
+.container{
+    margin: 0 auto;
+    background-color: sienna;
+}
+/* Smartphone Landscape >>>>>*/
+@media (min-width: 576px){
+    body{
+        background-color: rgb(92, 210, 246);
+    }
+    /* Layout >>>>>*/
+    .container{
+        max-width: 540px;
+    }
 }
 /* Tablet Portrait >>>>>*/
-@media (win-width: 768px){
-
+@media (min-width: 768px){
+    body{
+        background-color: rgb(225, 255, 0);
+    }
+    /* Layout >>>>>*/
+    .container{
+        max-width: 720px;
+    }
 }
-
 /* Tablet Landscape >>>>>*/
-@media (win-width: 992px){
-
+@media (min-width: 992px){
+    body{
+        background-color: rgb(227, 59, 47);
+    }
+    /* Layout >>>>>*/
+    .container{
+        max-width: 960px;
+    }
 }
 /* PC >>>>>*/
-@media (win-width: 1200px){
-    
+@media (min-width: 1200px){
+    body{
+        background-color: rgb(43, 255, 0);
+    }
+    /* Layout >>>>>*/
+    .container{
+        max-width: 1140px;
+    }
 }
