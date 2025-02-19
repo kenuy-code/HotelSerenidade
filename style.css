@@ -2,15 +2,15 @@
     Folha de estilo do site Hotel Serenidade 
 */
 
+/* Importação Google Fonts >>>>>>*/
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
 /* CSS Reset >>>>>*/
 * {
     margin: 0;
     padding: 0;
     border: 0;
 }
-
-/* Importação Google Fonts >>>>>>*/
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 
 body {
     font-family: 'Roboto', sans-serif;
@@ -24,7 +24,6 @@ body {
 /* Layout >>>>>*/
 .container {
     margin: 0 auto;
-    background-color: #dcdcdc;
 }
 
 .flex {
@@ -43,14 +42,50 @@ header {
 }
 
 #logo img {
-    width: 128px;
-    height: 128px;
+    width: 110px;
+    height: 110px;
+}
+
+#check {
+    display: none;
+}
+
+label {
+    font-size: 2em;
+    padding-right: 15px;
+    position: fixed;
+    top: 10px; 
+    right: 10px; 
+    z-index: 1000; 
+    color: #000; 
+}
+
+nav ul {
+    list-style: none;
+    background-color: #343538;
+    height: 100vh;
+    top: 60px;
+    position: fixed;
+    width: 100%;
+    right: -100%;
+    transition: all 0.5s;
+}
+
+#check:checked ~ ul {
+    right: 0;
+}
+
+nav ul li {
+    padding: 20px;
+    border-bottom: 1px solid #57585a;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
 }
 /* Smartphone Landscape >>>>>*/
 @media (min-width: 576px) {
-    body {
-        background-color: rgb(92, 210, 246);
-    }
 
     /* Layout >>>>>*/
     .container {
@@ -60,9 +95,6 @@ header {
 
 /* Tablet Portrait >>>>>*/
 @media (min-width: 768px) {
-    body {
-        background-color: rgb(225, 255, 0);
-    }
 
     /* Layout >>>>>*/
     .container {
@@ -72,9 +104,6 @@ header {
 
 /* Tablet Landscape >>>>>*/
 @media (min-width: 992px) {
-    body {
-        background-color: rgb(227, 59, 47);
-    }
 
     /* Layout >>>>>*/
     .container {
@@ -84,9 +113,6 @@ header {
 
 /* PC >>>>>*/
 @media (min-width: 1200px) {
-    body {
-        background-color: rgb(43, 255, 0);
-    }
 
     /* Layout >>>>>*/
     .container {
@@ -98,8 +124,32 @@ header {
         height: 120px;
     }
     #logo img {
-        width: 256px;
-        height: 256px;
+        width: 189px;
+        height: 189px;
         margin-top: 30px;
+    }
+
+    label {
+        display: none;
+    }
+
+    nav ul {
+        position: static;
+        height: auto;
+        background-color: transparent;
+        margin-bottom: 150px;
+    }
+
+    nav ul li {
+        float: left;
+        border: 0;
+    }
+
+    nav ul li a {
+        color: #343538;
+    }
+
+    nav ul li a:hover {
+        color: #ff4800;
     }
 }
