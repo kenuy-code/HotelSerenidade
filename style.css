@@ -17,7 +17,8 @@ body {
     font-size: 16px;
     font-weight: 400;
     line-height: 1.5;
-    color: #333;
+    color: #000000;
+    font-weight: 700;
     background-color: rgb(255, 255, 255);
 }
 
@@ -31,10 +32,26 @@ body {
     justify-content: space-between;
     align-items: center;
 }
+
+.flex2 {
+    display: flex;
+    align-items: center;
+}	
 #topo {
     position: fixed;
     right: 10px;
     bottom: 10px;
+}
+
+.Botao {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.3em;
+    font-weight: 700;
+    background-color: #1d3a41;
+    padding: 10px 25px;
+    border: 2px solid #fff;
+    border-radius: 25px;
 }
 /* Smartphone Portrait >>>>>*/
 header {
@@ -44,6 +61,7 @@ header {
 #logo img {
     width: 110px;
     height: 110px;
+    border-radius: 50%;
 }
 
 #check {
@@ -84,6 +102,64 @@ nav ul li a {
     color: #fff;
     text-decoration: none;
 }
+
+/* Destaque >>>>>*/
+main {
+    height: 75vh;
+    background: url(img/quarto_celular.png);
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+}
+
+main h1 {
+    font-size: 2.5em;
+}
+
+main h2 {
+    font-size: 1.2em;
+    margin: 20px 0px 50px 0px;
+}
+
+main h1, main h2 {
+    text-shadow: #000 0.05em 0.05em 0.05em;
+}
+
+/* Sobre >>>>>*/
+
+#sobre {
+    background-color: #f5f5f5;
+    padding: 50px 0px;
+    background: url(img/back1.png);
+    background-position: center;
+    background-size: cover;
+    color: #D3D3D3;
+    text-shadow: #000 0.05em 0.05em 0.05em;
+}
+
+#destaqueSobre {
+    display: none;
+}
+
+#textoSobre {
+    padding: 0px 20px;
+}
+
+#textoSobre h2 {
+    margin-bottom: 10px;
+}
+
+.topicosSobre {
+    margin-top: 20px;
+}
+
+.topicosSobre img {
+    margin-right: 10px;
+}
 /* Smartphone Landscape >>>>>*/
 @media (min-width: 576px) {
 
@@ -91,6 +167,9 @@ nav ul li a {
     .container {
         max-width: 540px;
     }
+
+    /* Destaque >>>>>*/
+    
 }
 
 /* Tablet Portrait >>>>>*/
@@ -100,6 +179,21 @@ nav ul li a {
     .container {
         max-width: 720px;
     }
+
+    /* Destaque >>>>>*/
+    main {
+        height: 40vh;
+        background: url(img/quartoatt.jpg);
+        background-size: cover;
+    }
+
+    main h1 {
+        font-size: 5.5em;
+    }
+
+    main h2 {
+        font-size: 2.5em;
+    }
 }
 
 /* Tablet Landscape >>>>>*/
@@ -108,6 +202,11 @@ nav ul li a {
     /* Layout >>>>>*/
     .container {
         max-width: 960px;
+    }
+
+    /* Destaque >>>>>*/
+    main {
+        height: 70vh;
     }
 }
 
@@ -151,5 +250,20 @@ nav ul li a {
 
     nav ul li a:hover {
         color: #ff4800;
+    }
+
+    /* Sobre >>>>>*/
+    #sobre {
+        background-attachment: fixed;
+    }
+    #destaqueSobre {
+        display: inline;
+    }
+
+    #destaqueSobre img {
+        width: 300px;
+        height: 300px;
+        margin-right: 50px;
+        border-radius: 50%;
     }
 }
