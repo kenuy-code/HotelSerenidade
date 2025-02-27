@@ -36,7 +36,12 @@ body {
 .flex2 {
     display: flex;
     align-items: center;
-}	
+}
+
+.flex3 {
+    display: flex;
+    flex-direction: column;
+}
 #topo {
     position: fixed;
     right: 10px;
@@ -53,6 +58,7 @@ body {
     border: 2px solid #fff;
     border-radius: 25px;
 }
+
 /* Smartphone Portrait >>>>>*/
 header {
     height: 60px;
@@ -72,30 +78,31 @@ label {
     font-size: 2em;
     padding-right: 15px;
     position: fixed;
-    top: 10px; 
-    right: 10px; 
-    z-index: 1000; 
-    color: #000; 
+    top: 10px;
+    right: 10px;
+    z-index: 1000;
+    color: rgba(0, 0, 0, 0.5);
 }
 
 nav ul {
     list-style: none;
-    background-color: #343538;
+    background-color: rgba(52, 53, 56, 0.95);
     height: 100vh;
     top: 60px;
     position: fixed;
-    width: 100%;
-    right: -100%;
+    width: 65%;
+    right: -65%;
     transition: all 0.5s;
 }
 
-#check:checked ~ ul {
+#check:checked~ul {
     right: 0;
 }
 
 nav ul li {
     padding: 20px;
     border-bottom: 1px solid #57585a;
+    text-align: right;
 }
 
 nav ul li a {
@@ -125,7 +132,8 @@ main h2 {
     margin: 20px 0px 50px 0px;
 }
 
-main h1, main h2 {
+main h1,
+main h2 {
     text-shadow: #000 0.05em 0.05em 0.05em;
 }
 
@@ -160,6 +168,26 @@ main h1, main h2 {
 .topicosSobre img {
     margin-right: 10px;
 }
+
+/* Vídeo >>>>>*/
+#descubramais {
+    padding: 50px 10px;
+}
+
+#descubramais h2 {
+    margin-bottom: 10px;
+}
+
+#descubramais p {
+    margin-bottom: 25px;
+}
+
+#video iframe {
+    width: 340px;
+    height: 191px;
+    border: 0;
+}
+
 /* Smartphone Landscape >>>>>*/
 @media (min-width: 576px) {
 
@@ -168,9 +196,13 @@ main h1, main h2 {
         max-width: 540px;
     }
 
-    /* Destaque >>>>>*/
-    
+    /* Vídeo >>>>>*/
+    #video iframe {
+        width: 560px;
+        height: 315px;
+    }
 }
+
 
 /* Tablet Portrait >>>>>*/
 @media (min-width: 768px) {
@@ -222,6 +254,7 @@ main h1, main h2 {
     header {
         height: 120px;
     }
+
     #logo img {
         width: 189px;
         height: 189px;
@@ -235,6 +268,7 @@ main h1, main h2 {
     nav ul {
         position: static;
         height: auto;
+        width: 100%;
         background-color: transparent;
         margin-bottom: 150px;
     }
@@ -256,6 +290,7 @@ main h1, main h2 {
     #sobre {
         background-attachment: fixed;
     }
+
     #destaqueSobre {
         display: inline;
     }
@@ -265,5 +300,11 @@ main h1, main h2 {
         height: 300px;
         margin-right: 50px;
         border-radius: 50%;
+    }
+
+    /* Vídeo >>>>>*/
+    .flex3 {
+        flex-direction: row;
+        align-items: center;
     }
 }
